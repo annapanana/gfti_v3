@@ -9,7 +9,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div class="home-wrap">
-        <h1>HOME PAGE</h1>
+        <h1>HOME PAGE!</h1>
       </div>
     );
   }
