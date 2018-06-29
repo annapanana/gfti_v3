@@ -16,6 +16,8 @@ import Header from './components/shared/Header'
 
 // Pages
 import Home from './components/pages/Home'
+import About from './components/pages/About'
+import Contact from './components/pages/Contact'
 
 // Styles
 import 'sass/app.sass'
@@ -25,7 +27,9 @@ ReactDOM.render((
   <Router>
     <div>
       <Header />
-      <Route exact path="/" component={Home}/>
+      <Route exact path="/about" component={About}/>
+      <Route exact path="/contact" component={Contact}/>
+      <Route path="/" component={Home}/>
       <Footer />
     </div>
   </Router>

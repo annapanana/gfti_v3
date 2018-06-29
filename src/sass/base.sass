@@ -1,0 +1,35 @@
+body
+  margin: 0
+h1, h2, h3, h4, h5, p, div
+  font-family: 'Open Sans', sans-serif
+h1, h2, h3, h4, h5
+  margin: 0
+  font-family: 'Quattrocento Sans', sans-serif
+a.btn,
+button.btn
+  text-align: center
+  text-decoration: none
+  border: 1px solid $secondary
+  color: $secondary
+  padding: .5em
+  border-radius: 3px
+  min-width: 100px
+  transition: background-color .2s ease, color .2s ease
+  &:hover
+    background-color: $secondary
+    color: $white
+div.side-by-side
+  +flex-row
+  padding: 2em 0
+  align-items: center
+  text-align: center
+  div, a
+    +flex-col
+    align-items: center
+    min-height: 100px
+    text-decoration: none
+    color: $black
+    width: 50%
+    margin: 1em
+    padding: 1em
+    background-color: $tertiary-light

@@ -16,10 +16,10 @@ export default class Home extends React.Component {
   render() {
     return (
       <div class="home-wrap">
-        <h1>HOME PAGE!</h1>
+        <h1>Create Your Postcard</h1>
         <Router>
           <div>
-            <Route exact path="/" component={Step1}/>
+            <Route exact path="/step-1" component={Step1}/>
             <Route exact path="/step-2" component={Step2}/>
             <Route exact path="/step-3" component={Step3}/>
           </div>

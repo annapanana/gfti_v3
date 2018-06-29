@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import NextButton from "./NextButton";
 
 export default class Step2 extends React.Component {
   constructor(props) {
@@ -10,7 +10,7 @@ export default class Step2 extends React.Component {
     return (
       <div class="home-wrap">
         <h1>Step 2</h1>
-        <Link to="/step-3">Next</Link>
+        <NextButton to={"/step-3"}/>
       </div>
     );
   }

@@ -7,12 +7,18 @@ export default class Header extends React.Component {
     super();
   }
 
-
-
   render() {
     return (
       <div class="header-wrap">
-        Header
+        <h3>
+          <Link to="/">
+            Greetings from the Internet
+          </Link>
+        </h3>
+        <div>
+          <Link to="about">About</Link>
+          <Link to="contact">Contact Us</Link>
+        </div>
       </div>
     )
   }
