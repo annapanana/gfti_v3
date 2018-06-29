@@ -1,13 +1,12 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
-  Redirect,
+  Switch,
   Route,
 } from 'react-router-dom';
 import NextButton from "./NextButton";
-import Step1Options from "./subfields/Step1Options";
-import EnterAddress from "./subfields/EnterAddress";
-import FindByZipcode from "./subfields/FindByZipcode";
+import Selection from "./step_1_states/Selection";
+import EnterAddress from "./step_1_states/EnterAddress";
+import FindByZipcode from "./step_1_states/FindByZipcode";
 
 export default class Step1 extends React.Component {
   constructor(props) {
@@ -19,13 +18,11 @@ export default class Step1 extends React.Component {
     return (
       <div class="home-wrap">
         <h2>Step 1: Choose a Recipient</h2>
-        <Router>
-          <div>
-            <Route exact path={`${match.url}/zipcode`} component={FindByZipcode}/>
-            <Route exact path={`${match.url}/manual`} component={EnterAddress}/>
-            <Route exact path={match.url} component={Step1Options}/>
-          </div>
-        </Router>
+        <Switch>
+          <Route path={`${match.url}/zipcode`} component={FindByZipcode}/>
+          <Route path={`${match.url}/manual`} component={EnterAddress}/>
+          <Route path={match.url} component={Selection}/>
+        </Switch>
         <NextButton to={"/step-2"}/>
       </div>
     );

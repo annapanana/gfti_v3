@@ -2,7 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {
   BrowserRouter as Router,
+  Redirect,
   Route,
+  Switch,
   Link
 } from 'react-router-dom'
 
@@ -27,9 +29,12 @@ ReactDOM.render((
   <Router>
     <div>
       <Header />
-      <Route exact path="/about" component={About}/>
-      <Route exact path="/contact" component={Contact}/>
-      <Route path="/" component={Home}/>
+      <Switch>
+        <Route exact path="/about" component={About}/>
+        <Route exact path="/contact" component={Contact}/>
+        <Route path="/" component={Home}/>
+        <Redirect to="/"/>
+      </Switch>
       <Footer />
     </div>
   </Router>

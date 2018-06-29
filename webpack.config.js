@@ -76,9 +76,8 @@ module.exports = {
     // })
   ],
   devServer: {
-    // historyApiFallback: true
     historyApiFallback: {
-      contentBase: path.join(__dirname, "dist")
+      index: 'http://localhost:8080/index.html',
     }
   },
   externals: {
