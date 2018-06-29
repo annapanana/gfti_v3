@@ -3,7 +3,6 @@ const router = express.Router();
 const knex = require('../knex');
 
 router.get('/', (req, res, next) => {
-  console.log("getting plants");
   knex('plants')
     .then(results => {
       if (results.length === 0) {
