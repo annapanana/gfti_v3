@@ -27,4 +27,4 @@ ReactDOM.render((
       <Route exact path="/" component={Home}/>
     </div>
   </Router>
-), document.getElementById('app'));
+), document.getElementById('root'));
