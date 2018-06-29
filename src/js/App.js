@@ -24,7 +24,9 @@ import 'sass/app.sass'
 ReactDOM.render((
   <Router>
     <div>
+      <Header />
       <Route exact path="/" component={Home}/>
+      <Footer />
     </div>
   </Router>
 ), document.getElementById('root'));

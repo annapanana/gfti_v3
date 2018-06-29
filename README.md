@@ -20,3 +20,9 @@ CREATE TABLE movies (
 
 <!-- Show tables: \dt -->
 <!-- Display one table: \d movies -->
+
+<!-- Creating a migration: knex migrate:make migration_name -->
+
+<!-- Running seed: knex seed:run -->
+
+<!-- Running migration on heroku: heroku run knex migrate:latest -->

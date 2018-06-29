@@ -55,7 +55,7 @@ module.exports = {
     modules: [path.join(__dirname, "src"), "node_modules"],
     'alias': {
       'styles': path.resolve(__dirname, './src/sass'),
-      'components': path.resolve(__dirname, './src/js'),
+      'components': path.resolve(__dirname, './src/js/components'),
       'stores': path.resolve(__dirname, './src/js/stores'),
       'actions': path.resolve(__dirname, './src/js/actions'),
       'shared': path.resolve(__dirname, './src/js/shared')
