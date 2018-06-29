@@ -1,0 +1,14 @@
+div.home-wrap {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  align-items: center; }
+  div.home-wrap h1 {
+    padding: 1em;
+    background-color: #9DDCDC;
+    position: absolute;
+    top: 25%; }
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAubWluLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/
