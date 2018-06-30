@@ -16,14 +16,14 @@ export default class Step1 extends React.Component {
   render() {
     const {match} = this.props;
     return (
-      <div class="home-wrap">
-        <h2>Step 1: Choose a Recipient</h2>
+      <div class="step-1-wrap embedded-panel">
+        <h2 class="text-center">Step 1: Choose a Recipient</h2>
         <Switch>
           <Route path={`${match.url}/zipcode`} component={FindByZipcode}/>
           <Route path={`${match.url}/manual`} component={EnterAddress}/>
           <Route path={match.url} component={Selection}/>
         </Switch>
-        <NextButton to={"/step-2"}/>
+        <NextButton to={"/step-2"} text={"Next"}/>
       </div>
     );
   }

@@ -10,7 +10,7 @@ export default class Step2 extends React.Component {
     return (
       <div class="home-wrap">
         <h1>Step 2</h1>
-        <NextButton to={"/step-3"}/>
+        <NextButton to={"/step-3"} text={"Next"}/>
       </div>
     );
   }

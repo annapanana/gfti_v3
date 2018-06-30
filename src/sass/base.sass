@@ -2,9 +2,13 @@ body
   margin: 0
 h1, h2, h3, h4, h5, p, div
   font-family: 'Open Sans', sans-serif
+  &.text-center
+    text-align: center
 h1, h2, h3, h4, h5
   margin: 0
   font-family: 'Quattrocento Sans', sans-serif
+  &.text-center
+    text-align: center
 a.btn,
 button.btn
   text-align: center
@@ -33,3 +37,17 @@ div.side-by-side
     margin: 1em
     padding: 1em
     background-color: $tertiary-light
+div.embedded-panel
+  padding: 1em
+form.form-group
+  font-size: 1.4em
+  +flex-row
+  align-items: center
+  label
+    font-weight: 500
+  input
+    border: none
+    background-color: $tertiary-light
+    border-bottom: $secondary solid 1px
+    font-size: 1em
+    margin: 1em
