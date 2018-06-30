@@ -21,6 +21,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "flux": "^3.1.2",
     "jquery": "^3.3.1",
+    "js-cookie": "^2.2.0",
     "knex": "^0.14.6",
     "node-sass": "^4.9.0",
     "nodemon": "^1.17.5",

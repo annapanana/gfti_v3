@@ -19,8 +19,8 @@ export default class EnterAddress extends React.Component {
         zip: ""
       },
       stateSelection: {
-          "name": "Alabama",
-          "abbreviation": "AL"
+          "name": "Colorado",
+          "abbreviation": "CO"
       }
     }
   }

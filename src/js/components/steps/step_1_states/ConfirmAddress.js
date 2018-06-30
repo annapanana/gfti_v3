@@ -1,4 +1,5 @@
 import React from "react";
+import * as PostcardActions from "actions/PostcardActions";
 import ProgressButton from "../ProgressButton";
 
 export default class ConfirmAddress extends React.Component {
@@ -16,10 +17,13 @@ export default class ConfirmAddress extends React.Component {
           }
           <p>{apiData.last_line}</p>
         </div>
-        <ProgressButton to={"/step-2"} text={"Confirm & Continue"}/>
+        <ProgressButton text={"Confirm & Continue"} saveAction={()=> {
+            PostcardActions.updatePostcardData({
+              name: name,
+              address: apiData
+            })
+          }}/>
       </div>
     )
   }
 }
-
-// TODO save action should save address to ... cookies?

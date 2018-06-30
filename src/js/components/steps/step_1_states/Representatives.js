@@ -1,6 +1,14 @@
 import React from "react";
+import * as PostcardActions from "actions/PostcardActions";
 
 export default class Representatives extends React.Component {
+
+  saveAddress(name, address) {
+    PostcardActions.updatePostcardData({
+      name: name,
+      address: address
+    })
+  }
 
   showAddresses(officials) {
     return officials.map((elem, key) => {
@@ -19,7 +27,7 @@ export default class Representatives extends React.Component {
             <small>{elem.address[0].zip}</small>
           </div>
           <div class="elem center">
-            <button class="btn">Select This Rep</button>
+            <button class="btn" onClick={this.saveAddress.bind(this, elem.name, elem.address)}>Select This Rep</button>
           </div>
         </li>
       )

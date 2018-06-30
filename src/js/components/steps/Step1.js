@@ -2,19 +2,23 @@ import React from "react";
 import {
   Switch,
   Route,
+  withRouter
 } from 'react-router-dom';
 import Selection from "./step_1_states/Selection";
 import EnterAddress from "./step_1_states/EnterAddress";
 import FindByZipcode from "./step_1_states/FindByZipcode";
 import * as ResourceActions from "actions/ResourceActions";
 import ResourceStore from "stores/ResourceStore";
+import PostcardStore from "stores/PostcardStore";
 
-export default class Step1 extends React.Component {
+class Step1 extends React.Component {
   constructor(props) {
     super(props);
     this.serviceStart = this.serviceStart.bind(this);
     this.serviceError = this.serviceError.bind(this);
     this.getData = this.getData.bind(this);
+    this.postcardSaved = this.postcardSaved.bind(this);
+
     this.state = {
       isLoading: false,
       loadingError: null,
@@ -26,12 +30,14 @@ export default class Step1 extends React.Component {
     ResourceStore.on("resource-service-start", this.serviceStart);
     ResourceStore.on("resource-service-error", this.serviceError);
     ResourceStore.on("resource-loaded", this.getData);
+    PostcardStore.on("postcard-saved", this.postcardSaved);
   }
 
   componentWillUnmount() {
     ResourceStore.removeListener("resource-service-start", this.serviceStart);
     ResourceStore.removeListener("resource-service-error", this.serviceError);
     ResourceStore.removeListener("resource-loaded", this.getData);
+    PostcardStore.on("postcard-saved", this.postcardSaved);
   }
 
   serviceStart() {
@@ -54,6 +60,10 @@ export default class Step1 extends React.Component {
 
   getResource(params) {
     ResourceActions.getExternalResource(params);
+  }
+
+  postcardSaved() {
+    this.props.history.push("/step-2");
   }
 
   render() {
@@ -86,3 +96,5 @@ export default class Step1 extends React.Component {
     );
   }
 }
+
+export default withRouter(Step1);
