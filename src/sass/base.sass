@@ -39,15 +39,21 @@ div.side-by-side
     background-color: $tertiary-light
 div.embedded-panel
   padding: 1em
-form.form-group
+div.form-group, form.form-group, div.dropdown-select
   font-size: 1.4em
   +flex-row
+  justify-content: flex-start
   align-items: center
   label
     font-weight: 500
+    width: 100px
   input
     border: none
     background-color: $tertiary-light
     border-bottom: $secondary solid 1px
     font-size: 1em
     margin: 1em
+  &.dropdown-select
+    justify-content: flex-start
+    div.dropdown
+      margin: 1em

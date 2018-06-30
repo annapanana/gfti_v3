@@ -1,5 +1,5 @@
 import React from "react";
-import NextButton from "./NextButton";
+import ProgressButton from "./ProgressButton";
 
 export default class Step3 extends React.Component {
   constructor(props) {
@@ -10,7 +10,7 @@ export default class Step3 extends React.Component {
     return (
       <div class="home-wrap">
         <h1>Step 3</h1>
-        <NextButton to={"/"} text={"Next"}/>
+        <ProgressButton to={"/"} text={"Next"}/>
       </div>
     );
   }
