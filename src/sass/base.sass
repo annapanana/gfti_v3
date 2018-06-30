@@ -53,7 +53,29 @@ div.form-group, form.form-group, div.dropdown-select
     border-bottom: $secondary solid 1px
     font-size: 1em
     margin: 1em
+    border-radius: 0
+    box-shadow: none
   &.dropdown-select
     justify-content: flex-start
     div.dropdown
       margin: 1em
+div.table
+  ul
+    border: 1px solid $tertiary
+    list-style-type: none
+    padding: 1em
+    li
+      padding: 1em
+      border-bottom: 1px solid $tertiary
+      +flex-row
+      justify-content: space-between
+      div.elem
+        +flex-col
+        align-items: flex-start
+        height: 100px
+        width: 200px
+        &.center
+          align-items: center
+      &.table-header
+        div.elem
+          height: 20px
