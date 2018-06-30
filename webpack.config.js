@@ -55,10 +55,11 @@ module.exports = {
     modules: [path.join(__dirname, "src"), "node_modules"],
     'alias': {
       'styles': path.resolve(__dirname, './src/sass'),
+      'img': path.resolve(__dirname, './src/img'),
       'components': path.resolve(__dirname, './src/js/components'),
       'stores': path.resolve(__dirname, './src/js/stores'),
       'actions': path.resolve(__dirname, './src/js/actions'),
-      'shared': path.resolve(__dirname, './src/js/shared')
+      'shared': path.resolve(__dirname, './src/js/components/shared')
     },
     'extensions': ['.js', '.json', '.jsx', '.css', 'sass', '.png', '.svg', '.jpg']
   },

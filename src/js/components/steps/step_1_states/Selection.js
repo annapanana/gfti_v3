@@ -1,6 +1,5 @@
 import React from "react";
 import {Link} from 'react-router-dom';
-import ProgressButton from "../ProgressButton";
 
 export default class Selection extends React.Component {
   render() {
@@ -15,7 +14,6 @@ export default class Selection extends React.Component {
             <p>Enter address information manually</p>
           </Link>
         </div>
-        <ProgressButton to={"/step-2"} text={"Next"}/>
       </div>
     )
   }
