@@ -7,9 +7,16 @@ export default class ProgressButton extends React.Component {
     const {to, text, saveAction} = this.props;
     return (
       <div class="next-button-wrap">
-        <Link to={to} class="btn" onClick={()=> {
-            if (saveAction) { saveAction() }
-          }}>{text}</Link>
+        {
+          to ?
+            <Link to={to} class="btn" onClick={()=> {
+                if (saveAction) { saveAction() }
+              }}>{text}</Link>
+          :
+            <a class="btn" onClick={()=> {
+                if (saveAction) { saveAction() }
+              }}>{text}</a>
+        }
       </div>
     )
   }

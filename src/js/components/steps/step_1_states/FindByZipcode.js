@@ -16,7 +16,9 @@ export default class FindByZipcode extends React.Component {
     e.preventDefault();
     this.props.getResource({
       resource: "rep-by-zip",
-      zip: zip
+      params: {
+        zip: zip
+      }
     })
   }
 

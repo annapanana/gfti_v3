@@ -72,7 +72,14 @@ export default class Step1 extends React.Component {
               loadingError={loadingError}
               />
           }/>
-          <Route exact path={`${match.url}/manual`} render={({match}) => <EnterAddress getResource={this.getResource.bind(this)}/>}/>
+          <Route exact path={`${match.url}/manual`} render={({match}) =>
+            <EnterAddress
+              getResource={this.getResource.bind(this)}
+              apiData={apiData}
+              isLoading={isLoading}
+              loadingError={loadingError}
+              />
+          }/>
           <Route path={match.url} component={Selection}/>
         </Switch>
       </div>
