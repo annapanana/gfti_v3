@@ -4,10 +4,11 @@ export default class Images extends React.Component {
 
   getPhotos(photos) {
     return photos.map((elem, key) => {
+      const style = {
+        'backgroundImage': `url(${elem.urls.small})`
+      }
       return (
-        <div key={key}>
-          <img src={elem.urls.thumb}/>
-        </div>
+        <div key={key} class="image" style={style}></div>
       )
     })
   }
@@ -23,7 +24,7 @@ export default class Images extends React.Component {
           isLoading ?
             <div>Loading</div>
           :
-            apiData &&
+            apiData && apiData.results &&
               <div class="images">
                 {this.getPhotos(apiData.results)}
               </div>

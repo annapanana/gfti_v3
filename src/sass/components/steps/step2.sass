@@ -36,5 +36,14 @@ div.step-2-wrap
     div.images
       +flex-row
       flex-wrap: wrap
-      img
+      div.image
+        background-size: cover
+        background-position: center
+        width: 200px
+        height: 200px
         margin: 2em
+        box-shadow: none
+        transition: box-shadow .2s ease
+        &:hover
+          cursor: pointer
+          box-shadow: $dark-shadow
