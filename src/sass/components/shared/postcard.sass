@@ -14,5 +14,11 @@ div.postcard-wrap
       background-size: cover
       background-position: center
   div.postcard-back-wrap
-    +flex-col
+    +flex-row
+    flex-wrap: nowrap
     height: 100%
+    justify-content: space-between
+    div.col
+      text-align: left
+      width: 45% !important
+      // +flex-col
