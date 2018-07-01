@@ -1,6 +1,6 @@
 import React from "react";
-import ProgressButton from "./ProgressButton";
 import Postcard from "shared/postcards/Postcard";
+import Message from "./step_3_states/Message";
 
 export default class Step3 extends React.Component {
   constructor(props) {
@@ -9,9 +9,10 @@ export default class Step3 extends React.Component {
 
   render() {
     return (
-      <div class="home-wrap">
-        <h1>Step 3</h1>
-        <ProgressButton to={"/"} text={"Next"}/>
+      <div class="step-3-wrap embedded-panel">
+        <h2 class="text-center">Step 3</h2>
+        <p class="description-text text-center">Fill out your message below.</p>
+        <Message />
         <Postcard />
       </div>
     );

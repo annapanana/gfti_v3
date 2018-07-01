@@ -8,6 +8,7 @@ import Step0 from "components/steps/Step0"
 import Step1 from "components/steps/Step1"
 import Step2 from "components/steps/Step2"
 import Step3 from "components/steps/Step3"
+import Step4 from "components/steps/Step4"
 import * as ResourceActions from "actions/ResourceActions"
 import ResourceStore from "stores/ResourceStore"
 
@@ -85,6 +86,7 @@ export default class Home extends React.Component {
               />
           }/>
           <Route path="/step-3" component={Step3}/>
+          <Route path="/step-4" component={Step4}/>
           <Route path="/" component={Step0}/>
         </Switch>
       </div>
