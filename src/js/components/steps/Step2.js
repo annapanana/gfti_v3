@@ -9,10 +9,24 @@ import Postcard from "shared/Postcard";
 import Selection from "./step_2_states/Selection";
 import ImageResource from "./step_2_states/ImageResource";
 import ResourceStore from "stores/ResourceStore";
+import PostcardStore from "stores/PostcardStore";
 
-export default class Step2 extends React.Component {
+class Step2 extends React.Component {
   constructor(props) {
     super(props);
+    this.postcardSaved = this.postcardSaved.bind(this);
+  }
+
+  componentWillMount() {
+    PostcardStore.on("postcard-saved", this.postcardSaved);
+  }
+
+  componentWillUnmount() {
+    PostcardStore.on("postcard-saved", this.postcardSaved);
+  }
+
+  postcardSaved() {
+    this.props.history.push("/step-3");
   }
 
   render() {
@@ -45,4 +59,4 @@ export default class Step2 extends React.Component {
     );
   }
 }
-// <ProgressButton to={"/step-3"} text={"Next"}/>
+export default withRouter(Step2);
