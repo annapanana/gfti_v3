@@ -15,7 +15,7 @@ export default class Images extends React.Component {
         'backgroundImage': `url(${elem.urls.small})`
       }
       return (
-        <div key={key} class="image" style={style} onClick={this.selectPhoto.bind(this, elem.urls.medium)}></div>
+        <div key={key} class="image" style={style} onClick={this.selectPhoto.bind(this, elem.urls.regular)}></div>
       )
     })
   }

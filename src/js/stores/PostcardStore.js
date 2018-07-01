@@ -5,11 +5,17 @@ import Cookies from 'js-cookie';
 class PostcardStore extends EventEmitter {
   constructor() {
     super();
-    this.postcard = Cookies.get('postcard') || {};
+    this.postcard = Cookies.get('postcard') ? JSON.parse(Cookies.get('postcard')) : {};
   }
 
   updatePostcard(data) {
-    Cookies.set('postcard', data, { expires: 2 })
+    console.log("DATA: ", data);
+    const postcard = this.postcard;
+    // FIELDS, bg_img, name, address
+    for (let key in data) {
+      postcard[key] = data[key]
+    }
+    Cookies.set('postcard', postcard, { expires: 100000 })
   }
 
   getPostcard() {

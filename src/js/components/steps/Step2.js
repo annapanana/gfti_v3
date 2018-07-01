@@ -5,15 +5,15 @@ import {
   withRouter
 } from 'react-router-dom';
 import ProgressButton from "./ProgressButton";
-import Postcard from "shared/Postcard";
+import Postcard from "shared/postcards/Postcard";
 import Selection from "./step_2_states/Selection";
 import ImageResource from "./step_2_states/ImageResource";
 import ResourceStore from "stores/ResourceStore";
 import PostcardStore from "stores/PostcardStore";
 
 class Step2 extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.postcardSaved = this.postcardSaved.bind(this);
   }
 
