@@ -7,59 +7,20 @@ import {
 import Selection from "./step_1_states/Selection";
 import EnterAddress from "./step_1_states/EnterAddress";
 import FindByZipcode from "./step_1_states/FindByZipcode";
-import * as ResourceActions from "actions/ResourceActions";
-import ResourceStore from "stores/ResourceStore";
 import PostcardStore from "stores/PostcardStore";
 
 class Step1 extends React.Component {
   constructor(props) {
     super(props);
-    this.serviceStart = this.serviceStart.bind(this);
-    this.serviceError = this.serviceError.bind(this);
-    this.getData = this.getData.bind(this);
     this.postcardSaved = this.postcardSaved.bind(this);
-
-    this.state = {
-      isLoading: false,
-      loadingError: null,
-      apiData: null
-    }
   }
 
   componentWillMount() {
-    ResourceStore.on("resource-service-start", this.serviceStart);
-    ResourceStore.on("resource-service-error", this.serviceError);
-    ResourceStore.on("resource-loaded", this.getData);
     PostcardStore.on("postcard-saved", this.postcardSaved);
   }
 
   componentWillUnmount() {
-    ResourceStore.removeListener("resource-service-start", this.serviceStart);
-    ResourceStore.removeListener("resource-service-error", this.serviceError);
-    ResourceStore.removeListener("resource-loaded", this.getData);
     PostcardStore.on("postcard-saved", this.postcardSaved);
-  }
-
-  serviceStart() {
-    this.setState({isLoading:true})
-  }
-
-  serviceError() {
-    const error = ResourceStore.getError();
-    this.setState({isLoading: false, loadingError: error});
-  }
-
-  getData() {
-    const data = ResourceStore.getResource();
-    this.setState({
-      isLoading: false,
-      loadingError: null,
-      apiData: data
-    })
-  }
-
-  getResource(params) {
-    ResourceActions.getExternalResource(params);
   }
 
   postcardSaved() {
@@ -67,8 +28,7 @@ class Step1 extends React.Component {
   }
 
   render() {
-    const {match} = this.props,
-          {isLoading, loadingError, apiData} = this.state;
+    const {match, isLoading, loadingError, apiData, getResource} = this.props;
 
     return (
       <div class="step-1-wrap embedded-panel">
@@ -76,7 +36,7 @@ class Step1 extends React.Component {
         <Switch>
           <Route exact path={`${match.url}/zipcode`} render={({match}) =>
             <FindByZipcode
-              getResource={this.getResource.bind(this)}
+              getResource={getResource}
               apiData={apiData}
               isLoading={isLoading}
               loadingError={loadingError}
@@ -84,7 +44,7 @@ class Step1 extends React.Component {
           }/>
           <Route exact path={`${match.url}/manual`} render={({match}) =>
             <EnterAddress
-              getResource={this.getResource.bind(this)}
+              getResource={getResource}
               apiData={apiData}
               isLoading={isLoading}
               loadingError={loadingError}
