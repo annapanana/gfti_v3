@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  Switch,
-  Route,
-  withRouter
-} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import ProgressButton from "./ProgressButton";
 import Postcard from "shared/postcards/Postcard";
 import Selection from "./step_2_states/Selection";
@@ -35,25 +31,12 @@ class Step2 extends React.Component {
     return (
       <div class="step-2-wrap embedded-panel">
         <h2 class="text-center">Step 2: Select Background Image</h2>
-        <Switch>
-          <Route exact path={`${match.url}/unsplash`} render={({match}) =>
-            <ImageResource
-              getResource={getResource}
-              apiData={apiData}
-              isLoading={isLoading}
-              loadingError={loadingError}
-              name={"Unsplash"}/>
-          }/>
-          <Route exact path={`${match.url}/google`} render={({match}) =>
-            <ImageResource
-              getResource={getResource}
-              apiData={apiData}
-              isLoading={isLoading}
-              loadingError={loadingError}
-              name={"Google"}/>
-          }/>
-          <Route path={match.url} component={Selection}/>
-        </Switch>
+        <ImageResource
+          getResource={getResource}
+          apiData={apiData}
+          isLoading={isLoading}
+          loadingError={loadingError}
+          name={"Unsplash"}/>
         <Postcard />
       </div>
     );

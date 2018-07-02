@@ -8,7 +8,7 @@ export default class Step4 extends React.Component {
       <div class="step-4-wrap embedded-panel">
         <h2 class="text-center">Design</h2>
         <p class="text-center description-text">Customize your design by adjusting the image, adding a border, header text and stickers.</p>
-        <ProgressButton to={"/step-1"} text={"Start"}/>
+        <ProgressButton to={"/step-1"} text={"Next"}/>
         <Postcard />
       </div>
     )

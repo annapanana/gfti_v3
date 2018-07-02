@@ -6,11 +6,11 @@ export default class Selection extends React.Component {
     return (
       <div>
         <div class="side-by-side">
-          <Link to="/step-1/zipcode" class="left">
+          <Link to="/step-1/zipcode" class="col">
             <p>Find the address information of your local representation by zip code</p>
           </Link>
           <h2>or</h2>
-          <Link to="/step-1/manual" class="right">
+          <Link to="/step-1/manual" class="col">
             <p>Enter address information manually</p>
           </Link>
         </div>
