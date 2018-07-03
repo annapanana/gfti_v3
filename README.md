@@ -26,3 +26,11 @@ CREATE TABLE movies (
 <!-- Running seed: knex seed:run -->
 
 <!-- Running migration on heroku: heroku run knex migrate:latest -->
+
+TODOs
+(06/02/2018)
+- Send postcard to API ✓
+- Send postcard from API to lob ✓
+(06/03/2018)
+- Use lob to verify address
+- Fix manual entering of address

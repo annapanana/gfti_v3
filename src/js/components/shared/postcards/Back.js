@@ -3,17 +3,18 @@ import React from "react";
 export default class Back extends React.Component {
   render() {
     const {data} = this.props;
-    console.log(data.address);
     return (
       <div class="postcard-back-wrap">
         <div class="col">
           <h3>{data.address.name}</h3>
-          <p>{data.address.ln_01}</p>
+          <p>{data.address.address_line1}</p>
           {
-            data.address.ln_02 &&
-            <p>{data.address.ln_02}</p>
+            data.address.address_line2 &&
+            <p>{data.address.address_line2}</p>
           }
-          <p>{data.address.last_line}</p>
+          <p>{data.address.address_city}</p>
+          <p>{data.address.address_state}</p>
+          <p>{data.address.address_zip}</p>
         </div>
         {
           data.pc_back  &&

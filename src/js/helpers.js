@@ -4,6 +4,7 @@ export function restCall(url, method, data, startMsg, successMsg, errorMsg) {
   if (startMsg) {
     Dispatcher.dispatch( {type: startMsg} );
   }
+  console.log('data from helper js: ', data);
   $.ajax({
     url: `http://localHost:8000/api/${url}`,
     method: method || 'GET',

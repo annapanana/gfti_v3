@@ -32,9 +32,11 @@ class PostcardStore extends EventEmitter {
       case "zip":
         return {
           name: data.address.name,
-          ln_01: data.address.send_to.line1,
-          ln_02: data.address.send_to.line2,
-          last_line: `${data.address.send_to.city} ${data.address.send_to.state} ${data.address.send_to.zip}`
+          address_line1: data.address.send_to.line1,
+          address_line2: data.address.send_to.line2,
+          address_city: data.address.send_to.city,
+          address_state: data.address.send_to.state,
+          address_zip: data.address.send_to.zip
         }
         break;
       case "manual":
@@ -60,7 +62,7 @@ class PostcardStore extends EventEmitter {
         this.error = {};
         this.emit("postcard-saved");
         break;
-      },
+      }
       case "CLEAR_POSTCARD_DATA": {
         this.clearPostcard();
         this.emit("postcard-cleared");

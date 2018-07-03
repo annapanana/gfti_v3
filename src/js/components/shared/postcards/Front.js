@@ -23,7 +23,6 @@ export default class Front extends React.Component {
           style = data ? {
             'backgroundImage': `url(${data.bg_img})`
           } : {};
-          console.log(data);
     return (
       <div class="postcard-front-wrap">
         <div style={style}></div>
