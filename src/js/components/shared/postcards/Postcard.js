@@ -30,7 +30,7 @@ export default class Postcard extends React.Component {
       <div class="postcard-wrap">
         Postcard Preview
         {
-          postcard.name &&
+          postcard.address &&
             <div class="side-by-side">
               <Front data={postcard}/>
               <Back data={postcard}/>

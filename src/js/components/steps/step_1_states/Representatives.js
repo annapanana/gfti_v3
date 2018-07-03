@@ -4,10 +4,12 @@ import * as PostcardActions from "actions/PostcardActions";
 export default class Representatives extends React.Component {
 
   selectRep(name, address) {
-    //TODO confirm and format address
     PostcardActions.updatePostcardData({
-      name: name,
-      address: address[0]
+      source: "zip",
+      address: {
+        name: name,
+        send_to: address[0]
+      }
     })
   }
 

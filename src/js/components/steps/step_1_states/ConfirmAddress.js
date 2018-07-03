@@ -19,8 +19,11 @@ export default class ConfirmAddress extends React.Component {
         </div>
         <ProgressButton text={"Confirm & Continue"} saveAction={()=> {
             PostcardActions.updatePostcardData({
-              name: name,
-              address: apiData
+              source: "manual",
+              address: {
+                name: name,
+                send_to: apiData
+              }
             })
           }}/>
       </div>

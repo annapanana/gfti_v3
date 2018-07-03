@@ -6,3 +6,9 @@ export function updatePostcardData(data) {
     data: data
   });
 }
+
+export function clearPostcard() {
+  dispatcher.dispatch({
+    type: "CLEAR_POSTCARD_DATA"
+  })
+}

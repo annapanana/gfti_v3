@@ -9,13 +9,44 @@ class PostcardStore extends EventEmitter {
   }
 
   updatePostcard(data) {
-    console.log("DATA: ", data);
     const postcard = this.postcard;
+
+    if (data.address) {
+      const address = this.updatePostcardAddress(data)
+      data = {};
+      data.address = address;
+    }
     // FIELDS, bg_img, name, address
     for (let key in data) {
       postcard[key] = data[key]
     }
     Cookies.set('postcard', postcard, { expires: 100000 })
+  }
+
+  clearPostcard() {
+    Cookies.set('postcard', {}, { expires: 100000 })
+  }
+
+  updatePostcardAddress(data) {
+    switch (data.source) {
+      case "zip":
+        return {
+          name: data.address.name,
+          ln_01: data.address.send_to.line1,
+          ln_02: data.address.send_to.line2,
+          last_line: `${data.address.send_to.city} ${data.address.send_to.state} ${data.address.send_to.zip}`
+        }
+        break;
+      case "manual":
+        return {
+          name: data.address.name,
+          ln_01: data.address.send_to.delivery_line_1,
+          ln_02: data.address.send_to.delivery_line_2,
+          last_line: data.address.send_to.last_line
+        }
+      default:
+        console.error("Must provide source of address to parse it.")
+    }
   }
 
   getPostcard() {
@@ -28,6 +59,11 @@ class PostcardStore extends EventEmitter {
         this.updatePostcard(action.data);
         this.error = {};
         this.emit("postcard-saved");
+        break;
+      },
+      case "CLEAR_POSTCARD_DATA": {
+        this.clearPostcard();
+        this.emit("postcard-cleared");
         break;
       }
     }
