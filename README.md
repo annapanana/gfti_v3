@@ -32,5 +32,9 @@ TODOs
 - Send postcard to API ✓
 - Send postcard from API to lob ✓
 (06/03/2018)
-- Use lob to verify address
-- Fix manual entering of address
+- Use lob to verify address ✓
+- Fix manual entering of address ✓
+(06/04/2018)
+- Make postcard message data bind to input fields so they update in real time
+- Clear out postcard data when user starts flow from start
+- Create basic api template that accepts image

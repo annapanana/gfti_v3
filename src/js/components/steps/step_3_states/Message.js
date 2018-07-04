@@ -5,7 +5,6 @@ import * as PostcardActions from "actions/PostcardActions";
 export default class Message extends React.Component {
   constructor() {
     super();
-    this.saveMessage = this.saveMessage.bind(this);
 
     this.state = {
       to: "",
@@ -17,14 +16,14 @@ export default class Message extends React.Component {
   onChangeHandler(field, e) {
     const state = this.state;
     state[field] = e.target.value;
-    this.setState(state);
+    this.setState(state, ()=> {
+      PostcardActions.updatePostcardData({
+        pc_back: this.state
+      })
+    });
   }
 
-  saveMessage() {
-    PostcardActions.updatePostcardData({
-      pc_back: this.state
-    })
-  }
+  // TODO make progress button just push user to next step
 
   render() {
     const {to, message, from} = this.state;
@@ -47,7 +46,7 @@ export default class Message extends React.Component {
             </textarea>
           </div>
         </form>
-        <ProgressButton to={"/step-4"} text={"Next"} saveAction={this.saveMessage.bind(this)}/>
+        <ProgressButton to={"/step-4"} text={"Next"}/>
       </div>
     )
   }

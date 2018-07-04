@@ -4,7 +4,6 @@ import * as PostcardActions from "actions/PostcardActions";
 export default class Representatives extends React.Component {
 
   selectRep(name, address) {
-    console.log(address[0]);
     PostcardActions.updatePostcardData({
       source: "zip",
       address: {
