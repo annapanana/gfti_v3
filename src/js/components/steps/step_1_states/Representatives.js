@@ -4,11 +4,14 @@ import * as PostcardActions from "actions/PostcardActions";
 export default class Representatives extends React.Component {
 
   selectRep(name, address) {
+    console.log(address[0]);
     PostcardActions.updatePostcardData({
       source: "zip",
       address: {
         name: name,
-        send_to: address[0]
+        primary_line: address[0].line1,
+        secondary_line: address[0].line2,
+        last_line: `${address[0].city} ${address[0].state} ${address[0].zip}`
       }
     })
   }
