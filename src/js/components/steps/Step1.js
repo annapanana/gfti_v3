@@ -28,8 +28,7 @@ class Step1 extends React.Component {
   }
 
   render() {
-    const {match, isLoading, loadingError, apiData, getResource} = this.props;
-
+    const {match, isLoading, loadingError, apiData, getResource, verifiedAddress} = this.props;
     return (
       <div class="step-1-wrap embedded-panel">
         <h2 class="text-center">Step 1: Choose a Recipient</h2>
@@ -40,14 +39,15 @@ class Step1 extends React.Component {
               apiData={apiData}
               isLoading={isLoading}
               loadingError={loadingError}
+              verifiedAddress={verifiedAddress}
               />
           }/>
           <Route exact path={`${match.url}/manual`} render={({match}) =>
             <EnterAddress
               getResource={getResource}
-              apiData={apiData}
               isLoading={isLoading}
               loadingError={loadingError}
+              verifiedAddress={verifiedAddress}
               />
           }/>
           <Route path={match.url} component={Selection}/>

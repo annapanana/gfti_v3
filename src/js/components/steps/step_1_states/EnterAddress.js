@@ -1,6 +1,7 @@
 import React from "react";
 import ConfirmAddress from "./ConfirmAddress";
 import AddressForm from "./AddressForm";
+import * as AddressActions from "actions/AddressActions"
 
 export default class EnterAddress extends React.Component {
   constructor() {
@@ -41,24 +42,20 @@ export default class EnterAddress extends React.Component {
   }
 
   validateAddress() {
-    this.props.getResource({
-      resource: "validate-address",
-      params: {
-        address: this.state.address
-      }
-    })
+    AddressActions.validateAddress(this.state.address)
+    // TODO after the user selects a rep, use lob in the API only to validate
   }
 
   render() {
     const {stateSelection, address} = this.state,
-          {apiData} = this.props;
+          {verifiedAddress} = this.props;
 
     return (
       <div class="manual-wrap">
         {
-          apiData && apiData.length > 0 ?
+          verifiedAddress ?
             <ConfirmAddress
-              apiData={apiData[0]}
+              verifiedAddress={verifiedAddress}
               name={address.name}
               />
           :
@@ -67,7 +64,6 @@ export default class EnterAddress extends React.Component {
               onChangeHandler={this.onChangeHandler}
               stateSelection={stateSelection}
               updateStateSelection={this.updateStateSelection}
-              apiData={apiData}
               validateAddress={this.validateAddress}
               />
         }

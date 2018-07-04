@@ -4,27 +4,20 @@ import ProgressButton from "../ProgressButton";
 
 export default class ConfirmAddress extends React.Component {
   render() {
-    const {apiData, name} = this.props;
+    const {verifiedAddress, name} = this.props;
     return (
       <div>
         <div>
-          <p>Send To:</p>
-          <p>{name}</p>
-          <p>{apiData.delivery_line_1}</p>
+          <p>{verifiedAddress.name}</p>
+          <p>{verifiedAddress.primary_line}</p>
           {
-            apiData.delivery_line_2 &&
-              <p>{apiData.delivery_line_1}</p>
+            verifiedAddress.econdary_line &&
+              <p>{verifiedAddress.secondary_line}</p>
           }
-          <p>{apiData.last_line}</p>
+          <p>{verifiedAddress.last_line}</p>
         </div>
         <ProgressButton text={"Confirm & Continue"} saveAction={()=> {
-            PostcardActions.updatePostcardData({
-              source: "manual",
-              address: {
-                name: name,
-                send_to: apiData
-              }
-            })
+            PostcardActions.updatePostcardData({address:verifiedAddress})
           }}/>
       </div>
     )

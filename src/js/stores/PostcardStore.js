@@ -10,12 +10,7 @@ class PostcardStore extends EventEmitter {
 
   updatePostcard(data) {
     const postcard = this.postcard;
-
-    if (data.address) {
-      const address = this.updatePostcardAddress(data)
-      data = {};
-      data.address = address;
-    }
+    
     // FIELDS, bg_img, name, address
     for (let key in data) {
       postcard[key] = data[key]
@@ -25,30 +20,6 @@ class PostcardStore extends EventEmitter {
 
   clearPostcard() {
     Cookies.set('postcard', {}, { expires: 100000 })
-  }
-
-  updatePostcardAddress(data) {
-    switch (data.source) {
-      case "zip":
-        return {
-          name: data.address.name,
-          address_line1: data.address.send_to.line1,
-          address_line2: data.address.send_to.line2,
-          address_city: data.address.send_to.city,
-          address_state: data.address.send_to.state,
-          address_zip: data.address.send_to.zip
-        }
-        break;
-      case "manual":
-        return {
-          name: data.address.name,
-          ln_01: data.address.send_to.delivery_line_1,
-          ln_02: data.address.send_to.delivery_line_2,
-          last_line: data.address.send_to.last_line
-        }
-      default:
-        console.error("Must provide source of address to parse it.")
-    }
   }
 
   getPostcard() {

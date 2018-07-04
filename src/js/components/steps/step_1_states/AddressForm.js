@@ -16,7 +16,7 @@ export default class AddressForm extends React.Component {
   }
 
   render() {
-    const {address, onChangeHandler, stateSelection, updateStateSelection, apiData, validateAddress} = this.props;
+    const {address, onChangeHandler, stateSelection, updateStateSelection, validateAddress} = this.props;
     return (
       <div>
         <form>
@@ -54,10 +54,6 @@ export default class AddressForm extends React.Component {
             </div>
           </div>
         </form>
-        {
-          apiData && apiData.length === 0 &&
-            <p class="text-center">Address Not valid, please try a different address.</p>
-        }
         <ProgressButton text={"Try Address"} saveAction={validateAddress}/>
       </div>
     )
