@@ -37,5 +37,18 @@ TODOs
 (06/04/2018)
 - Make postcard message data bind to input fields so they update in real time ✓
 - Confirm postcard still sends and troubleshoot if needed ✓
-- Clear out postcard data when user starts flow from start
-- Create basic api template that accepts image
+- Clear out postcard data when user starts flow from start ✓
+- Create basic api template that accepts image ✓
+
+Future Features:
+- Make postcard dimensions in front end the same aspect ratio as cards that are sent (3x4)
+- Default formatting of postcard image should fill full postcard back
+- Give user the ability to adjust the image position
+- Save postcard message to postcard back
+- Design postcard back
+- Let the user pick the color of the postcard back
+- Let the user specify a message on postcard front
+- Stripe Payments gate before postcard send
+
+ONGOING
+- Better error detection and display relevant info to user
