@@ -7,12 +7,12 @@ export default class Back extends React.Component {
       <div class="postcard-back-wrap">
         <div class="col">
           <h3>{data.address.name}</h3>
-          <p>{data.address.primary_line}</p>
+          <p>{data.address.address_line1}</p>
           {
-            data.address.secondary_line &&
-            <p>{data.address.secondary_line}</p>
+            data.address.address_line2 &&
+            <p>{data.address.address_line2}</p>
           }
-          <p>{data.address.last_line}</p>
+          <p>{`${data.address.address_city} ${data.address.address_state} ${data.address.address_zip}`}</p>
         </div>
         {
           data.pc_back  &&

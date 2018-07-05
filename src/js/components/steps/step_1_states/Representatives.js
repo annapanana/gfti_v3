@@ -8,9 +8,11 @@ export default class Representatives extends React.Component {
       source: "zip",
       address: {
         name: name,
-        primary_line: address[0].line1,
-        secondary_line: address[0].line2,
-        last_line: `${address[0].city} ${address[0].state} ${address[0].zip}`
+        address_line1: address[0].line1,
+        address_line2: address[0].line2,
+        address_city: address[0].city,
+        address_state: address[0].state,
+        address_zip: address[0].zip
       }
     })
   }

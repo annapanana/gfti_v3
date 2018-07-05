@@ -1,7 +1,12 @@
 import React from "react"
 import ProgressButton from "./ProgressButton";
+import * as PostcardActions from "actions/PostcardActions";
 
 export default class Step0 extends React.Component {
+  constructor() {
+    super();
+    PostcardActions.clearPostcard();
+  }
   render() {
     return (
       <div class="embedded-panel">

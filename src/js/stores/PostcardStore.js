@@ -10,7 +10,7 @@ class PostcardStore extends EventEmitter {
 
   updatePostcard(data) {
     const postcard = this.postcard;
-    
+
     // FIELDS, bg_img, name, address
     for (let key in data) {
       postcard[key] = data[key]

@@ -35,6 +35,7 @@ TODOs
 - Use lob to verify address ✓
 - Fix manual entering of address ✓
 (06/04/2018)
-- Make postcard message data bind to input fields so they update in real time
+- Make postcard message data bind to input fields so they update in real time ✓
+- Confirm postcard still sends and troubleshoot if needed ✓
 - Clear out postcard data when user starts flow from start
 - Create basic api template that accepts image
