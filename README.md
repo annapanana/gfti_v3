@@ -29,27 +29,27 @@ CREATE TABLE movies (
 
 <h3>Done</h3>
 
-* <h5>(06/02/2018)</h5>
-  * Send postcard to API ✓
-  * Send postcard from API to lob ✓
-* <h5>(06/03/2018)</h5>
-  * Use lob to verify address ✓
-  * Fix manual entering of address ✓
-* <h5>(06/04/2018)</h5>
-  * Make postcard message data bind to input fields so they update in real time ✓
-  * Confirm postcard still sends and troubleshoot if needed ✓
-  * Clear out postcard data when user starts flow from start ✓
-  * Create basic api template that accepts image ✓
+<h5>(06/02/2018)</h5>
+- Send postcard to API ✓
+- Send postcard from API to lob ✓
+<h5>(06/03/2018)</h5>
+- Use lob to verify address ✓
+- Fix manual entering of address ✓
+<h5>(06/04/2018)</h5>
+- Make postcard message data bind to input fields so they update in real time ✓
+- Confirm postcard still sends and troubleshoot if needed ✓
+- Clear out postcard data when user starts flow from start ✓
+- Create basic api template that accepts image ✓
 
 <h3>Future Features</h3>
-* Make postcard dimensions in front end the same aspect ratio as cards that are sent (3x4)
-* Default formatting of postcard image should fill full postcard back
-* Give user the ability to adjust the image position
-* Save postcard message to postcard back
-* Design postcard back
-* Let the user pick the color of the postcard back
-* Let the user specify a message on postcard front
-* Stripe Payments gate before postcard send
+- Make postcard dimensions in front end the same aspect ratio as cards that are sent (3x4)
+- Default formatting of postcard image should fill full postcard back
+- Give user the ability to adjust the image position
+- Save postcard message to postcard back
+- Design postcard back
+- Let the user pick the color of the postcard back
+- Let the user specify a message on postcard front
+- Stripe Payments gate before postcard send
 
 <h3>Ongoing</h3>
-* Better error detection and display relevant info to user
+- Better error detection and display relevant info to user
