@@ -18,11 +18,20 @@ export default class Representatives extends React.Component {
   }
 
   showAddresses(officials) {
-    return officials.map((elem, key) => {
+    // Filter out officials who don't have address data
+    const filtered_officials = officials.filter(elem => {
+      return elem.address
+    })
+    return filtered_officials.map((elem, key) => {
       return (
         <li key={key}>
           <div class="elem">
-            <a href={elem.urls[0]} target="_blank">{elem.name}</a>
+            {
+              elem.urls ?
+                <a href={elem.urls[0]} target="_blank">{elem.name}</a>
+              :
+                <p>{elem.name}</p>
+            }
           </div>
           <div class="elem">
             {elem.party}
