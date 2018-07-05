@@ -27,7 +27,24 @@ CREATE TABLE movies (
 
 <!-- Running migration on heroku: heroku run knex migrate:latest -->
 
-<h3>Done</h3>
+<h3>TODO</h3>
+
+- [ ] Make postcard dimensions in front end the same aspect ratio as cards that are sent (3x4)
+- [ ] Default formatting of postcard image should fill full postcard back
+- [ ] Give user the ability to adjust the image position
+- [ ] Save postcard message to postcard back
+- [ ] Design postcard back
+- [ ] Let the user pick the color of the postcard back
+- [ ] Let the user specify a message on postcard front
+- [ ] Stripe Payments gate before postcard send
+
+<h3>Ongoing</h3>
+
+- [ ] Better error detection and display relevant info to user
+
+<hr/>
+
+<h3>Completed</h3>
 
 <h5>(06/02/2018)</h5>
 
@@ -45,17 +62,3 @@ CREATE TABLE movies (
 - [x] Confirm postcard still sends and troubleshoot if needed
 - [x] Clear out postcard data when user starts flow from start
 - [x] Create basic api template that accepts image
-
-<h3>Future Features</h3>
-
-- [ ] Make postcard dimensions in front end the same aspect ratio as cards that are sent (3x4)
-- [ ] Default formatting of postcard image should fill full postcard back
-- [ ] Give user the ability to adjust the image position
-- [ ] Save postcard message to postcard back
-- [ ] Design postcard back
-- [ ] Let the user pick the color of the postcard back
-- [ ] Let the user specify a message on postcard front
-- [ ] Stripe Payments gate before postcard send
-
-<h3>Ongoing</h3>
-- [ ] Better error detection and display relevant info to user
