@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c1c1c1;
+      }
+
+      .cls-2 {
+        font-size: 22px;
+      }
+
+      .cls-2, .cls-4 {
+        font-family: GothamRounded-Book, Gotham Rounded;
+      }
+
+      .cls-3 {
+        font-size: 48px;
+        font-family: Freeland, Freeland;
+      }
+
+      .cls-4 {
+        font-size: 26px;
+        letter-spacing: 0.05em;
+      }
+
+      .cls-5 {
+        letter-spacing: 0.1em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0.08em;
+      }
+    </style>
+  </defs>
+  <title>Asset 7</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <rect class="cls-1" width="400" height="300"/>
+        <text class="cls-2" transform="translate(138.02 87.48) rotate(-25.58)">A</text>
+        <text class="cls-2" transform="translate(155.11 79.43) rotate(-16.89)">N</text>
+        <text class="cls-2" transform="translate(173.36 74.03) rotate(-8.22)">D</text>
+        <text class="cls-2" transform="matrix(1, -0.04, 0.04, 1, 192.21, 71.69)"> </text>
+        <text class="cls-2" transform="translate(200.6 71.21) rotate(4.17)">N</text>
+        <text class="cls-2" transform="matrix(0.97, 0.23, -0.23, 0.97, 219.57, 72.66)">O</text>
+        <text class="cls-2" transform="translate(238.71 76.96) rotate(23.38)">W</text>
+        <text class="cls-3" transform="translate(56.1 155.58)">a message from</text>
+        <text class="cls-4" transform="translate(50.62 231.08)">Y<tspan class="cls-5" x="19.63" y="0">OUR </tspan><tspan class="cls-6" x="98.46" y="0">C</tspan><tspan class="cls-5" x="119.73" y="0">ONSITUENT</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

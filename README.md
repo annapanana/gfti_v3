@@ -29,11 +29,12 @@ CREATE TABLE movies (
 
 <h3>TODO</h3>
 
-- [ ] Make postcard dimensions in front end the same aspect ratio as cards that are sent (3x4)
+- [x] Make postcard dimensions in front end the same aspect ratio as cards that are sent (3x4)
 - [ ] Default formatting of postcard image should fill full postcard back
 - [ ] Give user the ability to adjust the image position
 - [ ] Save postcard message to postcard back
 - [ ] Design postcard back
+- [ ] Create empty image placeholder for postcard back before user adds a postcard back
 - [ ] Let the user pick the color of the postcard back
 - [ ] Let the user specify a message on postcard front
 - [ ] Stripe Payments gate before postcard send

@@ -4,7 +4,7 @@ export default class Back extends React.Component {
   render() {
     const {data} = this.props;
     return (
-      <div class="postcard-back-wrap">
+      <div class="postcard-back-wrap side">
         <div class="col">
           <h3>{data.address.name}</h3>
           <p>{data.address.address_line1}</p>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c1c1c1;
+      }
+
+      .cls-2 {
+        font-size: 24px;
+        font-family: Roboto-Bold, Roboto;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <title>Asset 12</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <rect class="cls-1" width="400" height="300"/>
+        <text class="cls-2" transform="translate(158.99 219.94) rotate(-147.31)">l</text>
+        <text class="cls-2" transform="matrix(-0.77, -0.63, 0.63, -0.77, 153.91, 216.96)">o</text>
+        <text class="cls-2" transform="translate(143.92 208.61) rotate(-133.19)">r</text>
+        <text class="cls-2" transform="matrix(-0.59, -0.81, 0.81, -0.59, 138.3, 202.87)">e</text>
+        <text class="cls-2" transform="translate(130.71 193.25) rotate(-114.7)">m</text>
+        <text class="cls-2" transform="translate(122.79 174.75) rotate(-105.63)"> </text>
+        <text class="cls-2" transform="matrix(-0.2, -0.98, 0.98, -0.2, 121.25, 169.32)">i</text>
+        <text class="cls-2" transform="matrix(-0.08, -1, 1, -0.08, 119.85, 163.58)">p</text>
+        <text class="cls-2" transform="translate(118.77 150.71) rotate(-86.2)">s</text>
+        <text class="cls-2" transform="translate(119.46 139) rotate(-77.54)">u</text>
+        <text class="cls-2" transform="matrix(0.41, -0.91, 0.91, 0.41, 121.76, 126.52)">m</text>
+        <text class="cls-2" transform="translate(130.43 108.39) rotate(-56.95)"> </text>
+        <text class="cls-2" transform="matrix(0.64, -0.77, 0.77, 0.64, 133.25, 103.62)">d</text>
+        <text class="cls-2" transform="matrix(0.75, -0.66, 0.66, 0.75, 141.42, 93.65)">o</text>
+        <text class="cls-2" transform="translate(151.37 85.14) rotate(-34.67)">l</text>
+        <text class="cls-2" transform="translate(156.07 81.6) rotate(-27.97)">o</text>
+        <text class="cls-2" transform="translate(167.64 75.59) rotate(-20.42)">r</text>
+        <text class="cls-2" transform="translate(175.52 72.71) rotate(-15.43)"> </text>
+        <text class="cls-2" transform="matrix(0.99, -0.16, 0.16, 0.99, 180.79, 71.05)">s</text>
+        <text class="cls-2" transform="translate(192.56 69.28) rotate(-2.97)">i</text>
+        <text class="cls-2" transform="translate(198.56 68.91) rotate(1.81)">t</text>
+        <text class="cls-2" transform="translate(206.33 69.19) rotate(6.52)"> </text>
+        <text class="cls-2" transform="matrix(0.97, 0.22, -0.22, 0.97, 211.84, 69.6)">a</text>
+        <text class="cls-2" transform="translate(223.78 71.85) rotate(24.26)">m</text>
+        <text class="cls-2" transform="matrix(0.81, 0.58, -0.58, 0.81, 241.87, 80.34)">e</text>
+        <text class="cls-2" transform="matrix(0.74, 0.68, -0.68, 0.74, 251.91, 87.68)">t</text>
+        <text class="cls-2" transform="matrix(0.68, 0.74, -0.74, 0.68, 257.6, 92.98)">,</text>
+        <text class="cls-2" transform="matrix(0.63, 0.78, -0.78, 0.63, 261.38, 97.06)"> </text>
+        <text class="cls-2" transform="matrix(0.54, 0.84, -0.84, 0.54, 265.01, 101.27)">c</text>
+        <text class="cls-2" transform="translate(271.48 111.27) rotate(66.31)">o</text>
+        <text class="cls-2" transform="translate(276.71 123.07) rotate(75.44)">n</text>
+        <text class="cls-2" transform="translate(279.94 135.48) rotate(84.13)">s</text>
+        <text class="cls-2" transform="matrix(-0.04, 1, -1, -0.04, 281.21, 147.17)">e</text>
+        <text class="cls-2" transform="translate(280.69 159.53) rotate(101.09)">c</text>
+        <text class="cls-2" transform="translate(278.28 171.3) rotate(108.08)">t</text>
+        <text class="cls-2" transform="translate(276.09 178.58) rotate(115.2)">e</text>
+        <text class="cls-2" transform="matrix(-0.53, 0.85, -0.85, -0.53, 270.67, 189.82)">t</text>
+        <text class="cls-2" transform="translate(266.78 196.34) rotate(129.53)">u</text>
+        <text class="cls-2" transform="matrix(-0.75, 0.66, -0.66, -0.75, 258.63, 206.26)">e</text>
+        <text class="cls-2" transform="matrix(-0.83, 0.56, -0.56, -0.83, 249.28, 214.44)">r</text>
+        <text class="cls-2" transform="translate(242.31 219.15) rotate(150.6)"> </text>
+      </g>
+    </g>
+  </g>
+</svg>

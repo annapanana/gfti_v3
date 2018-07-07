@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #777;
+      }
+    </style>
+  </defs>
+  <title>Asset 4</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <path class="cls-1" d="M0,0V300H400V0ZM320,108.52a60.67,60.67,0,0,1-16.08,41.14L200,262.23,96.08,149.66A60.67,60.67,0,0,1,80,108.52h0c0-50,57.05-78.5,97-48.51l23,17.22L223,60c40-30,97-1.46,97,48.51Z"/>
+    </g>
+  </g>
+</svg>

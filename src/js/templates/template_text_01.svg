@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c1c1c1;
+      }
+
+      .cls-2 {
+        font-size: 48px;
+        font-family: ProximaNovaS-Bold, Proxima Nova S;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <title>Asset 8</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <rect class="cls-1" width="400" height="300"/>
+        <text class="cls-2" transform="translate(48.08 79.5)">L<tspan x="23.62" y="0">o</tspan><tspan x="55.05" y="0">r</tspan><tspan x="82.56" y="0">e</tspan><tspan x="107.52" y="0">m</tspan><tspan x="143.82" y="0"> </tspan><tspan x="156.11" y="0">i</tspan><tspan x="168.49" y="0">p</tspan><tspan x="195.08" y="0">s</tspan><tspan x="219.87" y="0">u</tspan><tspan x="250.87" y="0">m</tspan><tspan x="287.16" y="0"> </tspan></text>
+        <text class="cls-2" transform="translate(48.08 199.5)">d<tspan x="30.06" y="0">o</tspan><tspan x="61.5" y="0">l</tspan><tspan x="83.48" y="0">o</tspan><tspan x="114.91" y="0">r</tspan><tspan x="142.41" y="0"> </tspan><tspan x="154.7" y="0">s</tspan><tspan x="179.49" y="0">i</tspan><tspan x="191.86" y="0">t</tspan><tspan x="215.19" y="0"> </tspan></text>
+        <text class="cls-2" transform="translate(48.09 259.5)">a<tspan x="28.66" y="0">m</tspan><tspan x="64.93" y="0">e</tspan><tspan x="89.89" y="0">t</tspan><tspan x="110.34" y="0">,</tspan><tspan x="122.62" y="0"> </tspan></text>
+        <text class="cls-2" transform="translate(48.08 139.5)">d<tspan x="30.06" y="0">o</tspan><tspan x="61.5" y="0">l</tspan><tspan x="83.48" y="0">o</tspan><tspan x="114.91" y="0">r</tspan><tspan x="142.41" y="0"> </tspan><tspan x="154.7" y="0">s</tspan><tspan x="179.49" y="0">i</tspan><tspan x="191.86" y="0">t</tspan><tspan x="215.19" y="0"> </tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

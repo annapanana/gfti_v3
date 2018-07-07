@@ -3,22 +3,25 @@ div.postcard-wrap
   padding-top: 1em
   flex: 0 0 100%
   border-top: $primary 1px solid
-  div.postcard-front-wrap
-    padding: 0 !important
-    margin: 0 !important
-    div
-      padding: 0
-      margin: 0
-      width: 100%
-      height: 100%
-      background-size: cover
-      background-position: center
-  div.postcard-back-wrap
-    +flex-row
-    flex-wrap: nowrap
-    height: 100%
-    justify-content: space-between
-    div.col
-      text-align: left
-      width: 45% !important
-      // +flex-col
+  div.side
+    width: 400px
+    height: 300px !important
+    margin: 1em
+    padding: 1.5em
+    border: 1px lighten($black, 50) dashed
+    border-radius: 6px
+    &.postcard-front-wrap
+      div
+        padding: 0
+        margin: 0
+        width: 100%
+        height: 100%
+        background-size: cover
+        background-position: center
+    &.postcard-back-wrap
+      +flex-row
+      flex-wrap: nowrap
+      justify-content: space-between
+      div.col
+        text-align: left
+        width: 49%

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c1c1c1;
+      }
+
+      .cls-2 {
+        fill: #777;
+      }
+
+      .cls-3 {
+        font-size: 112px;
+        font-family: Roboto-Black, Roboto;
+      }
+
+      .cls-4 {
+        letter-spacing: 0.01em;
+      }
+    </style>
+  </defs>
+  <title>Asset 14</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <rect class="cls-1" width="400" height="300"/>
+        <rect class="cls-2" width="400" height="300"/>
+        <text class="cls-3" transform="translate(52.97 195)">HO<tspan class="cls-4" x="156.02" y="0">L</tspan><tspan x="217.77" y="0">A</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
