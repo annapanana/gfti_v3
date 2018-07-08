@@ -1,9 +1,10 @@
 import React from "react";
 
 export default class FramePath extends React.Component {
-  selectFrame(key, color) {
+  selectFrame(key, color, opacity) {
     const style = {
-      fill: color
+      fill: color,
+      opacity: opacity
     }
     // TODO fill out frames
     switch (key) {
@@ -60,9 +61,7 @@ export default class FramePath extends React.Component {
     }
   }
   render() {
-    const {frame, color} = this.props;
-    console.log(frame);
-    // TODO get props
-    return this.selectFrame(frame.key, color.color)
+    const {frame, color, opacity} = this.props;
+    return this.selectFrame(frame.key, color.color, opacity)
   }
 }

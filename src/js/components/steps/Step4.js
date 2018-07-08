@@ -48,6 +48,7 @@ class Step4 extends React.Component {
         image_pos_x: 0,
         image_pos_y: 0,
         image_rot_: 0,
+        opacity: 1,
         frame: {key: "heart", thumb: "thumb_02.svg", frame: ""},
         color: {key: "yellow", color: "#fff02a"},
         font_family: "",
@@ -64,7 +65,6 @@ class Step4 extends React.Component {
   }
 
   updatePostcard(field, val) {
-    console.log(val);
     const postcard = this.state.postcard;
     if (!postcard.pc_front) {
       postcard.pc_front = {};

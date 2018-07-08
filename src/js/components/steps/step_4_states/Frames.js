@@ -1,9 +1,12 @@
 import React from "react";
 import Slider from "react-slick";
-// import Slider, { Range } from 'rc-slider';
+import SliderWrap from 'shared/SliderWrap';
 
 export default class Frames extends React.Component {
-
+  constructor() {
+    super();
+    this.updateOpacity = this.updateOpacity.bind(this);
+  }
   getFrameOptions(frame, updatePostcard) {
     const root = "js/templates/thumbs";
     const options = [
@@ -42,6 +45,10 @@ export default class Frames extends React.Component {
     })
   }
 
+  updateOpacity(value) {
+    this.props.updatePostcard("opacity", Math.round(value * 10) / 10);
+  }
+
   render() {
     const {postcard, updatePostcard} = this.props;
     const slickSettings = {
@@ -54,12 +61,25 @@ export default class Frames extends React.Component {
     return(
       <div class="panel">
         <h2>Frames and Designs</h2>
+        <h3>Frames:</h3>
         <Slider {...slickSettings} class="ui-widget white">
           {this.getFrameOptions(postcard.pc_front.frame, updatePostcard)}
         </Slider>
+        <h3>Colors:</h3>
         <Slider {...slickSettings} class="ui-widget white">
           {this.getColorOptions(postcard.pc_front.color, updatePostcard)}
         </Slider>
+        <h3>Opacity:</h3>
+        <div class="ui-slider">
+          <SliderWrap
+            value={postcard.pc_front.opacity}
+            min={0}
+            step={.1}
+            max={1}
+            orientation="horizontal"
+            onChange={this.updateOpacity}
+          />
+        </div>
       </div>
     )
   }

@@ -9,17 +9,6 @@ export default class Front extends React.Component {
     this.endDrag = this.endDrag.bind(this);
 
     this.state = {
-      image_url: "",
-      image_scale: "",
-      image_pos_x: "",
-      image_pos_y: "",
-      image_filter: "",
-      frame: "",
-      color: "",
-      font_family: "",
-      font_size: "",
-      text_pos: "",
-      greetings_text: "",
       selectedElement: null,
       offset: 0,
       image_bounding_box: {
@@ -118,7 +107,7 @@ export default class Front extends React.Component {
             x={pc_front.x_pos || 0} y={pc_front.y_pos || 0}
             transform={`scale(${pc_front.image_scale || 1})
             rotate(${pc_front.image_rot || 0} ${image_bounding_box.width/2} ${image_bounding_box.height/2})`} href={data.bg_img}/>
-            <FramePath frame={pc_front.frame} color={pc_front.color}/>
+            <FramePath frame={pc_front.frame} color={pc_front.color} opacity={pc_front.opacity}/>
         </svg>
       </div>
     )
