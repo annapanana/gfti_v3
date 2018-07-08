@@ -4,26 +4,38 @@ import Slider from "react-slick";
 
 export default class Frames extends React.Component {
 
-  getFrameOptions() {
+  getFrameOptions(frame, updatePostcard) {
     const root = "js/templates/thumbs";
-    const options = ["thumb_01.svg", "thumb_02.svg", "thumb_03.svg", "thumb_04.svg"];
+    const options = [
+      {key: "circle", thumb: "thumb_01.svg", frame: ""},
+      {key: "heart", thumb: "thumb_02.svg", frame: ""},
+      {key: "stars", thumb: "thumb_03.svg", frame: ""},
+      {key: "flag", thumb: "thumb_04.svg", frame: ""}];
     return options.map((elem, key) => {
       return (
-        <div class="widget-option" key={key}>
-          <img src={`/${root}/${elem}`}/>
+        <div class={"widget-option" + (frame === elem.key ? " selected":"")} key={key} onClick={updatePostcard.bind(this, "frame", elem)}>
+          <img class="frame" src={`/${root}/${elem.thumb}`}/>
         </div>
       )
     })
   }
 
-  getColorOptions() {
-    const options = ["#eb4b2e", "#fff02a", "#6dc4e2", "#926ee0", "#9fdd6f"];
+  getColorOptions(color, updatePostcard) {
+    const options = [
+      {key: "red", color: "#eb4b2e"},
+      {key: "yellow", color: "#fff02a"},
+      {key: "blue", color: "#6dc4e2"},
+      {key: "purple", color: "#926ee0"},
+      {key: "green", color: "#9fdd6f"},
+      {key: "white", color: "#fff"},
+      {key: "black", color: "#000"}
+]
     return options.map((elem, key) => {
       const style = {
-        'backgroundColor':elem
+        'backgroundColor':elem.color
       };
       return (
-        <div class="widget-option" key={key}>
+        <div class={"widget-option" + (color === elem.key ? " selected":"")} key={key} onClick={updatePostcard.bind(this, "color", elem)}>
           <div class="color" style={style}></div>
         </div>
       )
@@ -31,6 +43,7 @@ export default class Frames extends React.Component {
   }
 
   render() {
+    const {postcard, updatePostcard} = this.props;
     const slickSettings = {
       dots: true,
       infinite: false,
@@ -42,10 +55,10 @@ export default class Frames extends React.Component {
       <div class="panel">
         <h2>Frames and Designs</h2>
         <Slider {...slickSettings} class="ui-widget white">
-          {this.getFrameOptions()}
+          {this.getFrameOptions(postcard.pc_front.frame, updatePostcard)}
         </Slider>
         <Slider {...slickSettings} class="ui-widget white">
-          {this.getColorOptions()}
+          {this.getColorOptions(postcard.pc_front.color, updatePostcard)}
         </Slider>
       </div>
     )

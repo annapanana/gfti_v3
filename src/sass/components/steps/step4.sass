@@ -28,21 +28,31 @@ div.step-4-wrap
           background-color: $secondary
       div.ui-widget
         margin: 20px
-        background-color: #FFF
+        background-color: lighten($primary, 15)
         border-radius: 5px
         height: auto
-        width: 300px
+        width: 400px
         div.widget-option
           width: 100px !important
           height: 100px !important
+          margin: 10px
           display: flex !important
           flex-flow: column !important
           justify-content: center !important
           align-items: center !important
-          background-color: $tertiary
+          background-color: lighten($primary, 15)
+          img.frame
+            height: 100%
+            border-radius: 15px
+            border: 4px solid lighten($primary, 15)
           div.color
+            border-radius: 15px
             width: 100%
             height: 100%
+            border: 4px solid lighten($primary, 15)
+          &.selected
+            img.frame, div.color
+              border: 4px solid $white
   div.postcard-wrap
     flex: 0
     border-top: 0

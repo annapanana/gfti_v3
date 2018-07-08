@@ -20,28 +20,7 @@ class Step4 extends React.Component {
     this.postcardSaved = this.postcardSaved.bind(this);
     this.updateView = this.updateView.bind(this);
     this.updatePostcard = this.updatePostcard.bind(this);
-    this.stencils = [
-      {
-        stencils: [
-          {source:"template_stencil_01.svg"},
-          {source:"template_stencil_02.svg"},
-          {source:"template_stencil_03.svg"},
-          {source:"template_stencil_04.svg"}
-        ],
-        text: [
-          {source:"template_text_01.svg"},
-          {source:"template_text_02.svg"},
-          {source:"template_text_03.svg"},
-          {source:"template_text_04.svg"},
-          {source:"template_text_05.svg"}
-        ],
-        frame: [
-          {source:"template_frame_01.svg"},
-          {source:"template_frame_02.svg"},
-          {source:"template_frame_03.svg"}
-        ]
-      }
-    ]
+
     const postcard = PostcardStore.getPostcard();
     this.initDefaultVals(postcard);
     this.state = {
@@ -69,8 +48,8 @@ class Step4 extends React.Component {
         image_pos_x: 0,
         image_pos_y: 0,
         image_rot_: 0,
-        frame: "",
-        color: "",
+        frame: {key: "heart", thumb: "thumb_02.svg", frame: ""},
+        color: {key: "yellow", color: "#fff02a"},
         font_family: "",
         font_size: "",
         text_pos: "",
@@ -85,6 +64,7 @@ class Step4 extends React.Component {
   }
 
   updatePostcard(field, val) {
+    console.log(val);
     const postcard = this.state.postcard;
     if (!postcard.pc_front) {
       postcard.pc_front = {};
