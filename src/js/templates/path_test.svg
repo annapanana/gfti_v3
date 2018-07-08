@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c1c1c1;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <title>path_test</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <rect class="cls-1" width="400" height="300"/>
+      <path class="cls-2" d="M40.49,122"/>
+      <path class="cls-3" d="M35.67,124.89,353.32,95.62m-312.15,89,317.65-29.27m-312.15,89,317.65-29.27"/>
+    </g>
+  </g>
+</svg>

@@ -1,10 +1,11 @@
 import React from "react";
 
 export default class FramePath extends React.Component {
-  selectFrame(key, color, opacity) {
+  selectFrame(key, color, opacity, font_size, text) {
     const style = {
       fill: color,
-      opacity: opacity
+      opacity: opacity,
+      fontSize: font_size
     }
     // TODO fill out frames
     switch (key) {
@@ -44,8 +45,9 @@ export default class FramePath extends React.Component {
           </g>
         )
       case "flag":
-        <g>
+        return (
           <g>
+            <g>
             <path style={style} d="M321.51,191.67H400V175H326A127.38,127.38,0,0,1,321.51,191.67Z"/>
             <path style={style} d="M269,258.33H400V241.67H290A128.68,128.68,0,0,1,269,258.33Z"/>
             <path style={style} d="M304.28,225H400V208.33H314.46A127.33,127.33,0,0,1,304.28,225Z"/>
@@ -55,13 +57,25 @@ export default class FramePath extends React.Component {
             <path style={style} d="M325.89,125H400V108.33H321.38A127.1,127.1,0,0,1,325.89,125Z"/>
             <path style={style} d="M314.27,91.67H400V75H304A129,129,0,0,1,314.27,91.67Z"/>
           </g>
-        </g>
+          </g>
+        )
+      case "text-path":
+        return (
+          <g>
+            <path id="text-path" d="M35.67,124.89,353.32,95.62m-312.15,89,317.65-29.27m-312.15,89,317.65-29.27"/>
+            <text style={style}>
+              <textPath href="#text-path">
+                {text}
+              </textPath>
+            </text>
+          </g>
+        )
       default:
         return <g></g>
     }
   }
   render() {
-    const {frame, color, opacity} = this.props;
-    return this.selectFrame(frame.key, color.color, opacity)
+    const {frame, color, opacity, font_size, text} = this.props;
+    return this.selectFrame(frame.key, color.color, opacity, font_size, text)
   }
 }

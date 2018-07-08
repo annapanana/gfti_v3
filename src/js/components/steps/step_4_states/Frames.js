@@ -13,10 +13,12 @@ export default class Frames extends React.Component {
       {key: "circle", thumb: "thumb_01.svg", frame: ""},
       {key: "heart", thumb: "thumb_02.svg", frame: ""},
       {key: "stars", thumb: "thumb_03.svg", frame: ""},
-      {key: "flag", thumb: "thumb_04.svg", frame: ""}];
+      {key: "flag", thumb: "thumb_04.svg", frame: ""},
+      {key: "text-path", thumb: "thumb_05.svg", frame: ""}
+    ];
     return options.map((elem, key) => {
       return (
-        <div class={"widget-option" + (frame === elem.key ? " selected":"")} key={key} onClick={updatePostcard.bind(this, "frame", elem)}>
+        <div class={"widget-option" + (frame.key === elem.key ? " selected":"")} key={key} onClick={updatePostcard.bind(this, "frame", elem)}>
           <img class="frame" src={`/${root}/${elem.thumb}`}/>
         </div>
       )
@@ -38,7 +40,7 @@ export default class Frames extends React.Component {
         'backgroundColor':elem.color
       };
       return (
-        <div class={"widget-option" + (color === elem.key ? " selected":"")} key={key} onClick={updatePostcard.bind(this, "color", elem)}>
+        <div class={"widget-option" + (color.key === elem.key ? " selected":"")} key={key} onClick={updatePostcard.bind(this, "color", elem)}>
           <div class="color" style={style}></div>
         </div>
       )

@@ -12,6 +12,7 @@ import PostcardStore from "stores/PostcardStore";
 import ToolbarHeader from "./step_4_states/ToolbarHeader";
 import ImageAdjustments from "./step_4_states/ImageAdjustments";
 import Frames from "./step_4_states/Frames";
+import TextSettings from "./step_4_states/TextSettings";
 import * as PostcardActions from "actions/PostcardActions";
 
 class Step4 extends React.Component {
@@ -52,9 +53,9 @@ class Step4 extends React.Component {
         frame: {key: "heart", thumb: "thumb_02.svg", frame: ""},
         color: {key: "yellow", color: "#fff02a"},
         font_family: "",
-        font_size: "",
+        font_size: 24,
         text_pos: "",
-        greetings_text: ""
+        text: "The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog."
       }
       PostcardActions.updatePostcardData(postcard)
     }
@@ -99,7 +100,12 @@ class Step4 extends React.Component {
             <Route exact path={`${match.url}/image-settings`} render={({match}) =>
               <ImageAdjustments
                 updatePostcard={this.updatePostcard}
-                poscard={this.state.postcard}/>
+                postcard={this.state.postcard}/>
+            }/>
+            <Route exact path={`${match.url}/text-settings`} render={({match}) =>
+              <TextSettings
+                updatePostcard={this.updatePostcard}
+                postcard={this.state.postcard}/>
             }/>
             <Redirect to={`${match.url}/frames`}/>
           </Switch>

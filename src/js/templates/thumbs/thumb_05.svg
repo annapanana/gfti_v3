@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d1d1d1;
+      }
+
+      .cls-2 {
+        font-size: 24px;
+        fill: #333;
+        font-family: Roboto-Bold, Roboto;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <title>thumb_05</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <rect class="cls-1" width="72" height="72"/>
+      <text class="cls-2" transform="translate(9.35 47.01) scale(1.13 1)">ABC</text>
+    </g>
+  </g>
+</svg>
