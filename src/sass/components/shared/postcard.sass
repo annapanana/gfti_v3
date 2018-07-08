@@ -3,6 +3,8 @@ div.postcard-wrap
   padding-top: 1em
   flex: 0 0 100%
   border-top: $primary 1px solid
+  div.sides
+    +flex-row
   div.side
     width: 400px
     height: 300px !important
@@ -11,18 +13,19 @@ div.postcard-wrap
     &.edit-mode
       width: 800px
       height: 600px !important
-    &.postcard-front-wrap
-      div
-        padding: 0
-        margin: 0
-        width: 100%
-        height: 100%
-        background-size: cover
-        background-position: center
-    &.postcard-back-wrap
-      +flex-row
-      flex-wrap: nowrap
-      justify-content: space-between
-      div.col
-        text-align: left
-        width: 49%
+  div.postcard-front-wrap
+    div.image
+      background-color: $black
+      padding: 0
+      margin: 0
+      width: 100% !important
+      height: 100% !important
+      background-size: cover
+      background-position: center
+  div.postcard-back-wrap
+    +flex-row
+    flex-wrap: nowrap
+    justify-content: space-between
+    div.col
+      text-align: left
+      width: 49%

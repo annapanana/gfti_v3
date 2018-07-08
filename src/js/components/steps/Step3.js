@@ -3,8 +3,8 @@ import Postcard from "shared/postcards/Postcard";
 import Message from "./step_3_states/Message";
 
 export default class Step3 extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
   }
 
   render() {

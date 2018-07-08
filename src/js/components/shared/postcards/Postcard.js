@@ -1,6 +1,6 @@
 import React from "react";
 import Back from "./Back";
-import Front from "./Front";
+import FrontPlaceholder from "./FrontPlaceholder";
 import PostcardStore from "stores/PostcardStore";
 
 export default class Postcard extends React.Component {
@@ -17,7 +17,7 @@ export default class Postcard extends React.Component {
   }
 
   componentWillUnmount() {
-    PostcardStore.on("postcard-saved", this.postcardSaved);
+    PostcardStore.removeListener("postcard-saved", this.postcardSaved);
   }
 
   postcardSaved() {
@@ -31,8 +31,8 @@ export default class Postcard extends React.Component {
         Postcard Preview
         {
           postcard.address &&
-            <div class="side-by-side">
-              <Front data={postcard}/>
+            <div class="sides">
+              <FrontPlaceholder data={postcard}/>
               <Back data={postcard}/>
             </div>
         }

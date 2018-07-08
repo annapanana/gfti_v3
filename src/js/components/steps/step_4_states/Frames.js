@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import Slider, { Range } from 'rc-slider';
+// import Slider, { Range } from 'rc-slider';
 
 export default class Frames extends React.Component {
 
@@ -19,7 +19,7 @@ export default class Frames extends React.Component {
       dots: true,
       infinite: false,
       speed: 500,
-      slidesToShow: 3,
+      slidesToShow: 5,
       slidesToScroll: 1
     }
     return(

@@ -18,7 +18,7 @@ class Step2 extends React.Component {
   }
 
   componentWillUnmount() {
-    PostcardStore.on("postcard-saved", this.postcardSaved);
+    PostcardStore.removeListener("postcard-saved", this.postcardSaved);
   }
 
   postcardSaved() {

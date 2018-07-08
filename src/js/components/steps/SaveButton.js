@@ -18,9 +18,9 @@ export default class SaveButton extends React.Component {
   }
 
   componentWillUnmount() {
-    PostcardStore.on("postcard-service-start", this.serviceStart);
-    PostcardStore.on("postcard-service-error", this.serviceError);
-    PostcardStore.on("postcard-complete", this.serviceComplete);
+    PostcardStore.removeListener("postcard-service-start", this.serviceStart);
+    PostcardStore.removeListener("postcard-service-error", this.serviceError);
+    PostcardStore.removeListener("postcard-complete", this.serviceComplete);
   }
 
   serviceStart() {

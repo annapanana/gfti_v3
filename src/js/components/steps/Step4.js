@@ -1,13 +1,20 @@
 import React from "react";
+import {
+  Switch,
+  Route,
+  Redirect,
+  withRouter
+} from 'react-router-dom';
 import ProgressButton from "./ProgressButton";
 import SaveButton from "./SaveButton";
 import Front from "shared/postcards/Front";
 import PostcardStore from "stores/PostcardStore";
 import ToolbarHeader from "./step_4_states/ToolbarHeader";
 import ImageAdjustments from "./step_4_states/ImageAdjustments";
+import Frames from "./step_4_states/Frames";
 import * as PostcardActions from "actions/PostcardActions";
 
-export default class Step4 extends React.Component {
+class Step4 extends React.Component {
   constructor() {
     super();
     this.postcardSaved = this.postcardSaved.bind(this);
@@ -48,7 +55,7 @@ export default class Step4 extends React.Component {
   }
 
   componentWillUnmount() {
-    PostcardStore.on("postcard-saved", this.postcardSaved);
+    PostcardStore.removeListener("postcard-saved", this.postcardSaved);
   }
 
   postcardSaved() {
@@ -61,6 +68,7 @@ export default class Step4 extends React.Component {
         image_scale: 1,
         image_pos_x: 0,
         image_pos_y: 0,
+        image_rot_: 0,
         frame: "",
         color: "",
         font_family: "",
@@ -77,7 +85,6 @@ export default class Step4 extends React.Component {
   }
 
   updatePostcard(field, val) {
-    console.log(field);
     const postcard = this.state.postcard;
     if (!postcard.pc_front) {
       postcard.pc_front = {};
@@ -88,23 +95,9 @@ export default class Step4 extends React.Component {
     });
   }
 
-  getView(view) {
-    switch (view) {
-      case "image-adjustments":
-        return <ImageAdjustments
-          updatePostcard={this.updatePostcard}
-          poscard={this.state.postcard}/>
-      case "text-settings":
-        return (<div class="panel">Text Settings</div>)
-      case "frames":
-        return (<div class="panel">Frames</div>)
-      default:
-        return (<div class="panel">Image Adjustments</div>)
-    }
-  }
-
   render() {
-    const {postcard, view} = this.state;
+    const {match} = this.props,
+          {postcard, view} = this.state;
     return (
       <div class="step-4-wrap embedded-panel">
         <h2 class="text-center">Design</h2>
@@ -119,12 +112,24 @@ export default class Step4 extends React.Component {
               data={postcard}
               updatePostcard={this.updatePostcard}/>
           </div>
-          {this.getView(view)}
+          <Switch>
+            <Route exact path={`${match.url}/frames`} render={({match}) =>
+              <Frames updatePostcard={this.updatePostcard} postcard={this.state.postcard}/>
+            }/>
+            <Route exact path={`${match.url}/image-settings`} render={({match}) =>
+              <ImageAdjustments
+                updatePostcard={this.updatePostcard}
+                poscard={this.state.postcard}/>
+            }/>
+            <Redirect to={`${match.url}/frames`}/>
+          </Switch>
         </div>
         <SaveButton/>
       </div>
     )
   }
 }
+
+export default withRouter(Step4);
 
 // <ProgressButton to={"/step-1"} text={"Next"}/>
