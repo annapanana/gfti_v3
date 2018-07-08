@@ -55,7 +55,12 @@ export default class Front extends React.Component {
   endDrag(e) {
     this.setState({
       selectedElement: null,
-      offset: 0})
+      offset: 0}, ()=> {
+        const xPos = e.target.getAttributeNS(null, "x");
+        const yPos = e.target.getAttributeNS(null, "y");
+        this.props.updatePostcard("x_pos", xPos);
+        this.props.updatePostcard("y_pos", yPos);
+      })
   }
 
   getMousePosition(e, elem) {
@@ -69,11 +74,12 @@ export default class Front extends React.Component {
   render() {
     const {data} = this.props,
           pc_front = data.pc_front;
+          console.log(pc_front);
     return (
-      <div class="postcard-front-wrap side">
+      <div class="postcard-front-wrap side edit-mode">
         <svg viewBox="0 0 400 300">
           <title>Image Test</title>
-          <image id="image" width="400" height="300" x="0" y="0" transform={`scale(${pc_front.image_scale})`} href={data.bg_img}/>
+          <image id="image" width="400" height="300" x={pc_front.x_pos || 0} y={pc_front.y_pos || 0} transform={`scale(${pc_front.image_scale})`} href={data.bg_img}/>
         </svg>
       </div>
     )

@@ -21,6 +21,7 @@ export default class ImageAdjustments extends React.Component {
     return(
       <div class="panel">
         <h2>Image Adjustments</h2>
+        <h3>Scale:</h3>
         <div class="ui-slider">
           <Slider
             value={scale}

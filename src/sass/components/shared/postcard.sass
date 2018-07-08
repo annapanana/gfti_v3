@@ -7,9 +7,10 @@ div.postcard-wrap
     width: 400px
     height: 300px !important
     margin: 1em
-    padding: 1.5em
-    border: 1px lighten($black, 50) dashed
-    border-radius: 6px
+    box-shadow: $dark-shadow
+    &.edit-mode
+      width: 800px
+      height: 600px !important
     &.postcard-front-wrap
       div
         padding: 0

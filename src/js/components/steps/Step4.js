@@ -56,18 +56,20 @@ export default class Step4 extends React.Component {
   }
 
   initDefaultVals(postcard) {
-    postcard.pc_front = {
-      image_scale: 1,
-      image_pos_x: 0,
-      image_pos_y: 0,
-      frame: "",
-      color: "",
-      font_family: "",
-      font_size: "",
-      text_pos: "",
-      greetings_text: ""
+    if (!postcard.pc_front) {
+      postcard.pc_front = {
+        image_scale: 1,
+        image_pos_x: 0,
+        image_pos_y: 0,
+        frame: "",
+        color: "",
+        font_family: "",
+        font_size: "",
+        text_pos: "",
+        greetings_text: ""
+      }
+      PostcardActions.updatePostcardData(postcard)
     }
-    PostcardActions.updatePostcardData(postcard)
   }
 
   updateView(view) {
@@ -113,7 +115,9 @@ export default class Step4 extends React.Component {
           />
         <div class="tool-panel">
           <div class="postcard-wrap">
-            <Front data={postcard}/>
+            <Front
+              data={postcard}
+              updatePostcard={this.updatePostcard}/>
           </div>
           {this.getView(view)}
         </div>
