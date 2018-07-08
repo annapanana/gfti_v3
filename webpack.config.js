@@ -59,7 +59,8 @@ module.exports = {
       'components': path.resolve(__dirname, './src/js/components'),
       'stores': path.resolve(__dirname, './src/js/stores'),
       'actions': path.resolve(__dirname, './src/js/actions'),
-      'shared': path.resolve(__dirname, './src/js/components/shared')
+      'shared': path.resolve(__dirname, './src/js/components/shared'),
+      'templates': path.resolve(__dirname, './src/js/templates')
     },
     'extensions': ['.js', '.json', '.jsx', '.css', 'sass', '.png', '.svg', '.jpg']
   },
