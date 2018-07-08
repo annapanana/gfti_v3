@@ -1,0 +1,43 @@
+
+div.step-4-wrap
+  width: 100%
+  div.tool-header
+    background-color: $primary
+    min-height: 50px
+    padding: .5em
+    button.btn
+      margin: 0 .5em
+      border: 1px white solid
+      background-color: $primary
+      color: $white
+  div.tool-panel
+    +flex-row
+    align-items: flex-start
+    div.panel
+      margin-top: 2em
+      width: 100%
+      // +flex-col
+      background-color: $primary
+      div.ui-slider
+        width: 300px
+        div.rangeslider__handle
+          box-shadow: none
+        div.rangeslider__fill
+          background-color: $secondary
+      div.ui-widget
+        margin: 20px
+        background-color: #FFF
+        border-radius: 5px
+        height: auto
+        width: 300px
+        div.widget-option
+          width: 100px !important
+          height: 100px !important
+          display: flex !important
+          flex-flow: column !important
+          justify-content: center !important
+          align-items: center !important
+          background-color: $tertiary
+  div.postcard-wrap
+    flex: 0
+    border-top: 0
