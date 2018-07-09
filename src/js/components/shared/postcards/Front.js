@@ -122,7 +122,8 @@ export default class Front extends React.Component {
                   text={pc_front.text}
                   text_x={pc_front.text_x}
                   text_y={pc_front.text_y}
-                  font={pc_front.font.font}/>
+                  font={pc_front.font.font}
+                  text_opacity={pc_front.text_opacity}/>
             }
         </svg>
       </div>

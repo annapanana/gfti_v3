@@ -13,6 +13,7 @@ import ToolbarHeader from "./step_4_states/ToolbarHeader";
 import ImageAdjustments from "./step_4_states/ImageAdjustments";
 import Frames from "./step_4_states/Frames";
 import TextSettings from "./step_4_states/TextSettings";
+import Stickers from "./step_4_states/Stickers";
 import * as PostcardActions from "actions/PostcardActions";
 
 class Step4 extends React.Component {
@@ -53,6 +54,7 @@ class Step4 extends React.Component {
         frame: {key: "circle", thumb: "thumb_01.svg", frame: ""},
         color: {key: "yellow", color: "#fff02a"},
         font: {key: "roboto", thumb: "roboto_thumb.svg", font: "roboto"},
+        text_opacity: 1,
         font_size: 24,
         text_x: 50,
         text_y: 40,
@@ -105,6 +107,11 @@ class Step4 extends React.Component {
             }/>
             <Route exact path={`${match.url}/text-settings`} render={({match}) =>
               <TextSettings
+                updatePostcard={this.updatePostcard}
+                postcard={this.state.postcard}/>
+            }/>
+            <Route exact path={`${match.url}/stickers`} render={({match}) =>
+              <Stickers
                 updatePostcard={this.updatePostcard}
                 postcard={this.state.postcard}/>
             }/>

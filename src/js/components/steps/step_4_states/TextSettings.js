@@ -61,6 +61,17 @@ export default class TextSettings extends React.Component {
         <Slider {...slickSettings} class="ui-widget white">
           {this.getFontOptions(postcard.pc_front.font, updatePostcard)}
         </Slider>
+        <h3>Text Opacity:</h3>
+        <div class="ui-slider">
+          <SliderWrap
+            value={postcard.pc_front.text_opacity}
+            min={0}
+            step={.1}
+            max={1}
+            orientation="horizontal"
+            onChange={updatePostcard.bind(this, "text_opacity")}
+          />
+        </div>
         <h3>Vertical Text Positioning:</h3>
         <div class="ui-slider">
           <SliderWrap
