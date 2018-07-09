@@ -1,5 +1,6 @@
 import React from "react";
 import FramePath from "./FramePath";
+import DisplayText from "shared/postcards/DisplayText";
 
 export default class Front extends React.Component {
   constructor() {
@@ -113,6 +114,16 @@ export default class Front extends React.Component {
               opacity={pc_front.opacity}
               font_size={pc_front.font_size}
               text={pc_front.text}/>
+            {
+              pc_front.frame.key !== "text-path" &&
+                <DisplayText
+                  color={pc_front.color.color}
+                  size={pc_front.font_size}
+                  text={pc_front.text}
+                  text_x={pc_front.text_x}
+                  text_y={pc_front.text_y}
+                  font={pc_front.font.font}/>
+            }
         </svg>
       </div>
     )

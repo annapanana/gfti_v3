@@ -10,6 +10,7 @@ export default class Frames extends React.Component {
   getFrameOptions(frame, updatePostcard) {
     const root = "js/templates/thumbs";
     const options = [
+      {key: "none", thumb: "thumb_00.svg", frame: ""},
       {key: "circle", thumb: "thumb_01.svg", frame: ""},
       {key: "heart", thumb: "thumb_02.svg", frame: ""},
       {key: "stars", thumb: "thumb_03.svg", frame: ""},
