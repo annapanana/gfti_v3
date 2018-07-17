@@ -79,7 +79,6 @@ export default class Home extends React.Component {
     const {apiData, isLoading, loadingError, address} = this.state;
     return (
       <div class="home-wrap">
-        <h1>Create Your Postcard</h1>
         <Switch>
           <Route path="/step-1" render={({match}) =>
             <Step1

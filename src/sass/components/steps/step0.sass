@@ -1,0 +1,60 @@
+div.home-page-wrap
+  width: 100%
+  div.header
+    width: 100%
+    min-height: 100vh
+    background-image: url('/img/header_img.png')
+    background-size: cover
+    background-position: center
+    text-align: center
+    color: darken($primary, 10)
+    +flex-col
+    padding: 5% 15% 15% 15%
+    h1
+      font-size: 3em
+      margin-bottom: .75em
+    h3
+      margin-bottom: 1em
+      line-height: 150%
+      font-weight: 400
+  div.home-body
+    +flex-col
+    align-items: center
+    div.home-tile
+      box-shadow: $light-shadow
+      max-width: 1200px
+      min-height: 400px
+      margin: 10px
+      width: 100%
+      color: $white
+      +flex-row
+      align-items: center
+      justify-content: space-between
+      &.blue
+        background-color: $primary
+      &.red
+        background-color: $tertiary
+      p
+        margin-top: 1em
+        font-size: 1.4em
+      div.left
+        width: 48%
+        padding: 4em 0 4em 4em
+        &.send
+          width: 100%
+          position: relative
+          img
+            width: 100%
+      div.right
+        width: 48%
+        padding: 4em 4em 4em 0
+        &.image-selection
+          padding: 0
+          text-align: center
+          img
+            max-height: 400px
+        &.send
+          position: absolute
+          left: 52%
+      img.message
+        box-shadow: 0 4px 2px rgba(0,0,0,.25)

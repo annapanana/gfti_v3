@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, p, div, small
     text-align: center
 h1, h2, h3, h4, h5
   margin: 0
-  font-family: 'Quattrocento Sans', sans-serif
+  font-family: 'Merriweather', sans-serif
   &.text-center
     text-align: center
 p.description-text
@@ -15,15 +15,16 @@ a.btn,
 button.btn
   text-align: center
   text-decoration: none
-  border: 1px solid $secondary
-  color: $secondary
-  padding: .5em
+  border: 1px solid $white
+  background-color: $secondary
+  color: $white
+  padding: .5em 2em
   border-radius: 3px
   min-width: 100px
-  transition: background-color .2s ease, color .2s ease
-  &:hover
-    background-color: $secondary
-    color: $white
+  text-transform: uppercase
+  font-weight: 500
+  &.lg
+    font-size: 1.4em
 div.side-by-side
   +flex-row
   padding: 2em 0

@@ -9,7 +9,6 @@ export default class ToolbarHeader extends React.Component {
         <Link class="btn" to={"image-Settings"}>Image Settings</Link>
         <Link class="btn" to={"frames"}>Frames</Link>
         <Link class="btn" to={"text-settings"}>Text</Link>
-        <Link class="btn" to={"stickers"}>Stickers</Link>
       </div>
     )
   }

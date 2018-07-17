@@ -58,7 +58,8 @@ class Step4 extends React.Component {
         font_size: 24,
         text_x: 50,
         text_y: 40,
-        text: "The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog."
+        text: "The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.",
+        stickers: []
       }
       PostcardActions.updatePostcardData(postcard)
     }
